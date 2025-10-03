@@ -135,7 +135,7 @@ async def forward_file(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     # reenviamos el archivo al usuario
     for file in update.message.photo or []:
-        await context.bot.send_photo(chat_id=user_id, photo=file.file_id)
+        await context.bot.send_photo(chat_id=user_id, photo=update.message.photo[-1].file_id)
 
     if update.message.document:
         await context.bot.send_document(chat_id=user_id, document=update.message.document.file_id)
@@ -150,4 +150,5 @@ async def forward_file(update: Update, context: ContextTypes.DEFAULT_TYPE):
         descontar_creditos(str(user_id), cost)
 
     await update.message.reply_text("Archivo enviado ✅")
+
     conn.close()
