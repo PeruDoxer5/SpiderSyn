@@ -12,7 +12,7 @@ from urllib.error import HTTPError, URLError
 from telegram import Update, InputFile
 from telegram.ext import ContextTypes
 
-API_DB_BASE = "http://127.0.0.1:4764"   # tg_info, compras_id
+API_DB_BASE = "https://web-production-843d9.up.railway.app"   # tg_info, compras_id
 CONFIG_FILE_PATH = "config.json"
 
 # ================== Carga de config ==================
