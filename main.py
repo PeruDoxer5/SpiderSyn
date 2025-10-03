@@ -96,7 +96,7 @@ from comandos import admin_requests
 
 # ---------- Config ----------
 CONFIG_FILE_PATH = 'config.json'
-API_DB_BASE = "http://127.0.0.1:4764"  # para tg_info
+API_DB_BASE = "https://web-production-843d9.up.railway.app"  # para tg_info
 TELEGRAM_TOKEN = None
 ADMIN_ID = None
 
