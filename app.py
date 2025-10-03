@@ -1084,6 +1084,10 @@ def hist_venta_id():
     msg = "Ventas listadas" if data else "Sin ventas para este vendedor"
     return jsonify({"status": "ok", "message": msg, "data": data}), 200
 
+@app.route("/")
+def index():
+    return {"status": "ok", "message": "SpiderSyn API online"}
+
 @app.route("/historial_id", methods=["GET"])
 def historial_id():
     id_tg = request.args.get("ID_TG")
