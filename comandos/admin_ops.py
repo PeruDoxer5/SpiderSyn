@@ -14,7 +14,7 @@ from telegram.ext import ContextTypes
 # =========================
 # Config
 # =========================
-API_DB_BASE = "http://127.0.0.1:4764"
+API_DB_BASE = "https://web-production-843d9.up.railway.app"
 CONFIG_FILE_PATH = "config.json"
 
 # Endpoints
