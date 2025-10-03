@@ -14,7 +14,7 @@ try:
 except Exception:
     CFG = {}
 
-API_DB_BASE = CFG.get("API_DB_BASE", "http://127.0.0.1:4764")
+API_DB_BASE = CFG.get("API_DB_BASE", "https://web-production-843d9.up.railway.app")
 
 
 # --- Función base para consultas ---
@@ -72,3 +72,4 @@ def descontar_creditos(id_tg: str, cantidad: int = 1):
     if st != 200:
         return False, {}
     return True, js.get("data", {}) or {}
+
