@@ -13,7 +13,7 @@ from urllib.error import HTTPError, URLError
 from telegram import Update
 from telegram.ext import ContextTypes
 
-API_BASE = "http://127.0.0.1:4764"
+API_BASE = "https://web-production-843d9.up.railway.app"
 CONFIG_FILE_PATH = "config.json"
 
 BOT_NAME = ""
