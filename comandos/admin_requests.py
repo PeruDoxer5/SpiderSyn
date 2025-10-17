@@ -134,13 +134,13 @@ async def forward_file(update: Update, context: ContextTypes.DEFAULT_TYPE):
     request_id, user_id, cost = row
 
     # reenviamos el archivo al usuario
-    for file in update.message.photo or []:
+    if update.message.photo:
         await context.bot.send_photo(chat_id=user_id, photo=update.message.photo[-1].file_id)
 
-    if update.message.document:
+    elif update.message.document:
         await context.bot.send_document(chat_id=user_id, document=update.message.document.file_id)
 
-    if update.message.video:
+    elif update.message.video:
         await context.bot.send_video(chat_id=user_id, video=update.message.video.file_id)
 
     # 👇 Descontamos siempre en caso de archivo
@@ -152,3 +152,4 @@ async def forward_file(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Archivo enviado ✅")
 
     conn.close()
+
