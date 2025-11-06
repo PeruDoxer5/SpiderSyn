@@ -77,6 +77,7 @@ from comandos.doc import doc_command
 from comandos.ruc import ruc_command
 from comandos.sunat import sunat_command
 from comandos.seeker import seeker_command
+from comandos.facial import facial_command
 from comandos.start import start_command
 from comandos.buy import buy_command
 from comandos.me import me_command
