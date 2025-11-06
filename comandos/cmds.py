@@ -964,8 +964,8 @@ async def cmds_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
         caption = (
             f"<b>{bot_name}</b> <i>SISTEMA DE COMANDOS</i>\n"
             "🏷️ <b>CATEGORÍA</b> ➾ <code>EXTRAS [📚]</code>\n"
-            "🧩 <b>COMANDOS</b> ➾ <code>10</code> disponibles\n"
-            "📖 <b>PÁGINA</b> ➾ <code>1/2</code>\n\n"
+            "🧩 <b>COMANDOS</b> ➾ <code>11</code> disponibles\n"
+            "📖 <b>PÁGINA</b> ➾ <code>1/3</code>\n\n"
             "📍 <b>SEEKER COMPLETO · STANDARD</b>\n"
             "┈┈┈┈┈┈┈┈┈┈\n"
             "🟢 <b>ESTADO</b> ➾ <b>OPERATIVO</b> ✅\n"
@@ -1021,13 +1021,13 @@ async def cmds_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await query.answer()
         return
 
-# ------- RENIEC 2 -------
+# ------- EXTRAS 2 -------
     if data == "cmds_cat_extras_p2":
         caption = (
             f"<b>{bot_name}</b> <i>SISTEMA DE COMANDOS</i>\n"
             "🏷️ <b>CATEGORÍA</b> ➾ <code>EXTRAS [📚]</code>\n"
-            "🧩 <b>COMANDOS</b> ➾ <code>10</code> disponibles\n"
-            "📖 <b>PÁGINA</b> ➾ <code>2/2</code>\n\n"
+            "🧩 <b>COMANDOS</b> ➾ <code>11</code> disponibles\n"
+            "📖 <b>PÁGINA</b> ➾ <code>2/3</code>\n\n"
             "📍 <b>CONSTANCIA DE NOTAS · STANDARD</b>\n"
             "┈┈┈┈┈┈┈┈┈┈\n"
             "🟢 <b>ESTADO</b> ➾ <b>OPERATIVO</b> ✅\n"
@@ -1066,7 +1066,45 @@ async def cmds_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 reply_markup=InlineKeyboardMarkup([[
                     InlineKeyboardButton("⬅️", callback_data="cmds_cat_extras_p1"),
                     InlineKeyboardButton("🏠", callback_data="cmds_nav_home"),
-                    InlineKeyboardButton("➡️", callback_data="cmds_cat_extras_p1"),
+                    InlineKeyboardButton("➡️", callback_data="cmds_cat_extras_p3"),
+                ]])
+            )
+        except Exception:
+            await query.edit_message_text(
+                text=caption,
+                parse_mode="HTML",
+                reply_markup=InlineKeyboardMarkup([[
+                    InlineKeyboardButton("⬅️", callback_data="cmds_cat_extras_p1"),
+                    InlineKeyboardButton("🏠", callback_data="cmds_nav_home"),
+                    InlineKeyboardButton("➡️", callback_data="cmds_cat_extras_p3"),
+                ]]),
+                disable_web_page_preview=True
+            )
+        await query.answer()
+        return
+
+# ------- EXTRAS 3 -------
+    if data == "cmds_cat_extras_p3":
+        caption = (
+            f"<b>{bot_name}</b> <i>SISTEMA DE COMANDOS</i>\n"
+            "🏷️ <b>CATEGORÍA</b> ➾ <code>EXTRAS [📚]</code>\n"
+            "🧩 <b>COMANDOS</b> ➾ <code>11</code> disponibles\n"
+            "📖 <b>PÁGINA</b> ➾ <code>3/3</code>\n\n"
+            "📍 <b>RECONOCIMIENTO FACIAL · STANDARD</b>\n"
+            "┈┈┈┈┈┈┈┈┈┈\n"
+            "🟢 <b>ESTADO</b> ➾ <b>OPERATIVO</b> ✅\n"
+            "⌨️ <b>COMANDO</b> ➾ <code>/facial 44443333</code>\n"
+            "💳 <b>PRECIO</b> ➾ <code>30 créditos</code>\n"
+            "📦 <b>RESULTADO</b> ➾ <i>Pdf con reconocimiento facial.</i>\n\n"
+        )
+        try:
+            await query.edit_message_caption(
+                caption=caption,
+                parse_mode="HTML",
+                reply_markup=InlineKeyboardMarkup([[
+                    InlineKeyboardButton("⬅️", callback_data="cmds_cat_extras_p2"),
+                    InlineKeyboardButton("🏠", callback_data="cmds_nav_home"),
+                    InlineKeyboardButton("➡️", callback_data="cmds_cat_extras_p2"),
                 ]])
             )
         except Exception:
