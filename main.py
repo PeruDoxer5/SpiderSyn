@@ -313,6 +313,7 @@ def main():
     application.add_handler(CommandHandler("ruc", ruc_command))
     application.add_handler(CommandHandler("sunat", sunat_command))
     application.add_handler(CommandHandler("seeker", seeker_command))
+    application.add_handler(CommandHandler("facial", facial_command))
     
     # -------------------- GENERAR Y CANJEAR KEYS --------------------
     application.add_handler(CommandHandler("genkey", genkey))
