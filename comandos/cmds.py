@@ -321,7 +321,7 @@ async def cmds_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "🟢 <b>ESTADO</b> ➾ <b>OPERATIVO</b> <code>[✅]</code>\n"
             "⌨️ <b>COMANDO</b> ➾ <code>/tive AAA000</code>\n"
             "💳 <b>PRECIO</b> ➾ <code>8 créditos</code>\n"
-            "📦 <b>RESULTADO</b> ➾ <i>Busca datos del vehiculo, dueños, etc.</i>\n\n"
+            "📦 <b>RESULTADO</b> ➾ <i>Pdf tarjeta de propiedad electronica qr falso.</i>\n\n"
             "📍 <b>SOAT VEHÍCULAR PDF · STANDARD</b>\n"
             "┈┈┈┈┈┈┈┈┈┈\n"
             "🟢 <b>ESTADO</b> ➾ <b>OPERATIVO</b> <code>[✅]</code>\n"
